@@ -8,20 +8,6 @@ browser.browserAction.onClicked.addListener(() => {
 //
 console.dir(browser.management.getAll());
 
-function importIDB(dname,activity){
-    var r = window.indexedDB.open(dname);
-    r.onupgradeneeded = function(event) {
-        
-    }
-    r.onsuccess = function(event) {
-        
-    }
-    r.onerror = function (event) {
-        console.log("Unable to access IndexedDB, "+ event.target.errorCode);
-        alert("Unable to access IndexedDB, "+ event.target.errorCode);
-    }
-}
-
 //add activityLog listener for all extensions
 function extensionAll(){
     console.log('inside extensionAll()');
